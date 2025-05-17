@@ -1,0 +1,50 @@
+nav{
+    width: 400px;
+    font-family: serif;
+    font-size: 23px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-around;
+    margin-top: -10px;
+    transition: .1s;
+    position: fixed;
+}
+:any-link{
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+:any-link:hover{
+    color: red;
+    transition: color .2s;
+}
+:any-link::before{
+    content: "";
+    position: absolute;
+    width:0%;
+    border-bottom: 2px solid black;
+    bottom: 0;
+    transition: width .2s linear;
+}
+:any-link:hover::before{
+    color: rgb(255, 98, 0);
+    transition: width .2s linear;
+    width: 100%;
+}
+:any-link:focus{
+    border-bottom: 2px solid black;
+    bottom: -1px;
+    transition: bottom .1s linear;
+    color: red;
+}
+:root{
+    overflow: none;
+}
+.line{
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: relative;
+}
